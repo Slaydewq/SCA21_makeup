@@ -1,0 +1,20 @@
+Git Log
+The simplest analytics is performed by the git log command. It shows a list of all completed 
+commits sorted by the date of addition (the most recent on top):From this conclusion, we can 
+find out who, when and what commits were made. If the commits are well designed, then much is 
+already clear from their description. Making commits is a separate topic, which we will consider later.
+
+The git log command has a useful flag -p, which immediately outputs the dif for each commit:
+Git Show
+Each commit has an identifier (they say "hash"), a unique set of characters. Using a hash, you can view all 
+the changes made within a single commit:Commit hashes in Git are very long, and they can be inconvenient to use. 
+Therefore, Git developers have added the ability to specify only part of the hash. It is enough to take the first 8 characters 
+and substitute them into the command that works with commits:
+Git Blame
+What if we don't know the commit, but we wonder who was the last to change a specific line in the file? The git blame 
+<file path> command is suitable for this. This command outputs a file and next to each line shows who changed it and in which commit.
+It is important to remember that changing a line is not the same as writing it. It is quite possible that the programmer corrected a small typo,
+ and someone wrote the line before him. Having such a conclusion, it is already easy to go further and study a specific commit.
+The git grep command looks for a match with the specified string in all project files. This is a very convenient command for quick analysis from the terminal.
+ It is more convenient than the usual grep, since it knows about ignoring and does not look into the directory.git, and also knows how to search through history:
+
